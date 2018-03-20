@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>my-project</title>
+	</head>
+	<link rel="stylesheet" href="./static/init.css">
+	<script type="text/javascript" src="//static.youjiagou.com/common/resources/js/lib.js?1496999401"></script>
+	<script type="text/javascript" src="//static.youjiagou.com/common/resources/js/setData.js?1496999401"></script>
+    <script>
+		 var R_IMG = "http://192.168.1.183:8988/";
+		// var R_IMG = 'http://image.youjiagou.com/';
+		(function () {
+			var docEl = document.documentElement;
+			var resize = 'orientationchange' in window ? 'orientationchange' : 'resize';
+			var setRem = function () {
+				var screenWidth = docEl.clientWidth || window.screen.width;
+				docEl.style.fontSize = (100 * screenWidth / 1080) + 'px';
+			};
+
+			window.addEventListener('resize', setRem, false);
+			setRem();
+		})();
+
+		function getCookie(a) {
+			for (var b = function(a) {
+				return a.replace(/^(\s*)|(\s*)$/g, "")
+			}, c = document.cookie.split(";"), d = 0; d < c.length; d++) {
+				var e = c[d]
+				, f = e.split("=");
+				if (f && b(f[0]) == decodeURI(a)) {
+					var g = f[1] || "";
+					try {
+						return decodeURIComponent(g)
+					} catch (a) {
+						return unescape(g)
+					}
+				}
+			}
+			return ""
+		}
+	</script>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		html,body{
+			height:100%;
+			width: 100%;
+			background: #f4f4f4;
+		}
+	</style>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
